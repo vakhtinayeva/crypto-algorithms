@@ -87,5 +87,9 @@ function getModulo(bigNumber, modulo) {
     .minus(bigNumber.multipliedBy(-1).mod(modulo))
     .mod(modulo);
 }
+//function to generate pseudorandom number in [min, max]
+const generateRandom = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-module.exports = { findInverse, getModulo, calculateGreatestCommonDevisor, powMod };
+module.exports = { findInverse, getModulo, calculateGreatestCommonDevisor, powMod, generateRandom };
